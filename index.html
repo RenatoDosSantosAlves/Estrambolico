@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrasco Estrambólico - Churrasco Premium para Seu Evento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        .font-estrambo {
+            font-family: 'Caveat', cursive;
+        }
+        
+        .bg-grill {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23221000" width="1200" height="600"/><g fill="%23ff4400" opacity="0.6"><rect x="0" y="200" width="1200" height="100"/><rect x="0" y="350" width="1200" height="100"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .grill-pattern {
+            background-image: repeating-linear-gradient(
+                90deg,
+                #222 0px,
+                #444 20px,
+                #222 40px
+            );
+        }
+        
+        .meat-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        @keyframes flame {
+            0%, 100% { transform: scaleY(1) rotate(-2deg); }
+            50% { transform: scaleY(1.3) rotate(2deg); }
+        }
+        
+        .flame {
+            animation: flame 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="relative overflow-hidden">
+        <div class="bg-grill min-h-screen flex items-center justify-center">
+            <div class="text-center z-10">
+                <h1 class="font-estrambo text-6xl md:text-8xl text-orange-500 mb-4">
+                    Churrasco Estrambólico
+                </h1>
+                <div class="w-32 h-32 mx-auto mb-4 relative">
+                    <i class="fas fa-fire-flame-curved text-8xl text-orange-400 flame"></i>
+                </div>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Churrasco Premium Levado até Você
+                </p>
+                <button id="ctaButton" class="bg-orange-600 hover:bg-orange-700 px-8 py-4 rounded-full text-xl font-bold transition-all">
+                    Fazer Pedido <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            
+            <!-- Animated grill lines -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="h-full w-full grill-pattern"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="font-estrambo text-5xl text-center text-orange-500 mb-12">
+                Nossos Serviços
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 rounded-lg p-6 text-center meat-card">
+                    <i class="fas fa-truck text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Levamos até Você</h3>
+                    <p class="text-gray-300">Mudamos para seu evento, completo com churrasqueiras móveis de alta qualidade.</p>
+                </div>
+                
+                <div class="bg-gray-700 rounded-lg p-6 text-center meat-card">
+                    <i class="fas fa-users text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Garçons Especializados</h3>
+                    <p class="text-gray-300">Equipe treinada para servir seu churrasco da melhor forma possível.</p>
+                </div>
+                
+                <div class="bg-gray-700 rounded-lg p-6 text-center meat-card">
+                    <i class="fas fa-utensils text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Tudo Incluído</h3>
+                    <p class="text-gray-300">Carne de primeiríssima qualidade, guarnições e o melhor atendimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="font-estrambo text-5xl text-center text-orange-500 mb-12">
+                Destaques do Cardápio
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-b from-red-800 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-drumstick-bite text-6xl text-white"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2">Picanha Premium</h4>
+                        <p class="text-gray-400">A melhor picanha do mercado, temperada na brasa.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-b from-red-900 to-red-700 flex items-center justify-center">
+                        <i class="fas fa-bacon text-6xl text-white"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2">Costela Suína</h4>
+                        <p class="text-gray-400">Carnes selecionadas, defumadas no carvão de churrasqueiro.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-b from-yellow-800 to-yellow-600 flex items-center justify-center">
+                        <i class="fas fa-hotdog text-6xl text-white"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2">Linguiçinhas</h4>
+                        <p class="text-gray-400">Artesanais com sabores exclusivos do Brasil.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-b from-red-700 to-red-500 flex items-center justify-center">
+                        <i class="fas fa-steak text-6xl text-white"></i>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2">Fraldinha</h4>
+                        <p class="text-gray-400">Macia, temperada nos ervas finas, brasa na medida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="font-estrambo text-5xl text-center text-orange-500 mb-12">
+                Como Funciona
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="flex-shrink-0 w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Agende seu Evento</h3>
+                        <p class="text-gray-300">Entre em contato via Instagram ou formulário para marcar sua data.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="flex-shrink-0 w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Montamos Tudo</h3>
+                        <p class="text-gray-300">Chegamos no local, montamos o churrasco e preparamos tudo com perfeição.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Aproveite o Evento</h3>
+                        <p class="text-gray-300">Nossos garçons servirão tudo enquanto você curte com seus convidados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="font-estrambo text-5xl text-center text-orange-500 mb-12">
+                Últimos Eventos
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square bg-gray-700 rounded-lg flex items-center justify-center text-6xl">
+                    <i class="fas fa-camera text-gray-500 hover:text-orange-500 transition-colors"></i>
+                </div>
+                <div class="aspect-square bg-gray-700 rounded-lg flex items-center justify-center text-6xl">
+                    <i class="fas fa-camera text-gray-500 hover:text-orange-500 transition-colors"></i>
+                </div>
+                <div class="aspect-square bg-gray-700 rounded-lg flex items-center justify-center text-6xl">
+                    <i class="fas fa-camera text-gray-500 hover:text-orange-500 transition-colors"></i>
+                </div>
+                <div class="aspect-square bg-gray-700 rounded-lg flex items-center justify-center text-6xl">
+                    <i class="fas fa-camera text-gray-500 hover:text-orange-500 transition-colors"></i>
+                </div>
+            </div>
+            
+            <p class="text-center mt-6 text-gray-400">
+                Veja mais em nosso <a href="#instagram" class="text-orange-500 hover:underline">Instagram @churrascoestrambolico</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-orange-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-estrambo text-4xl md:text-5xl mb-6">
+                Pronto para o Churrasco Perfeito?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Entre em contato via WhatsApp ou Instagram e agende seu evento hoje mesmo!
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full text-xl font-bold transition-all flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </button>
+                
+                <button id="instagramButton" class="bg-pink-600 hover:bg-pink-700 px-8 py-4 rounded-full text-xl font-bold transition-all flex items-center justify-center">
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </button>
+            </div>
+            
+            <p class="text-sm mt-8 text-orange-100">
+                @churrascoestrambolico
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                Churrasco Estrambólico &copy; 2024 - Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll for buttons
+        document.getElementById('ctaButton').addEventListener('click', () => {
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Instagram link
+        document.getElementById('instagramButton').addEventListener('click', () => {
+            window.open('https://instagram.com/churrascoestrambolico', '_blank');
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.meat-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 10px 30px rgba(255, 87, 34, 0.3)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = '';
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const hero = document.querySelector('header');
+            hero.style.transform = `translateY(${scrollY * 0.5}px)`;
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=NomeAleatorioDiferentao/minha-nuvem" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
